@@ -5,6 +5,8 @@ diamonds2 <- diamonds[indices,]
 
 diamonds2 %>% ggplot(aes(x=cut)) + geom_bar()
 
-diamonds2 %>% ggplot() + aes(x=price) + geom_histogram(bins = 20, aes(col = cut))
+diamonds2 %>% ggplot() + aes(x=price) + geom_histogram(bins = 20, aes(fill = cut), col="black")
 
-diamonds2 %>% ggplot() + aes(x=carat, y=price) + geom_point()
+diamonds2 %>% ggplot() + aes(x=carat, y=price, color=cut) + geom_point()
+
+
